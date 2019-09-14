@@ -1,6 +1,7 @@
+ARG ARCH
 ARG POSTGRES_VERSION=9.6
 
-FROM postgres:${POSTGRES_VERSION}
+FROM ${ARCH}postgres:${POSTGRES_VERSION}
 
 LABEL org.opencontainers.image.authors="Jeremie Drouet <jeremie.drouet@gmail.com>" \
 	org.opencontainers.image.title="PostgreSQL+PostGIS" \
