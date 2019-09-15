@@ -5,7 +5,7 @@ FROM ${ARCH}postgres:${POSTGRES_VERSION}
 
 LABEL org.opencontainers.image.authors="Jeremie Drouet <jeremie.drouet@gmail.com>" \
 	org.opencontainers.image.title="PostgreSQL+PostGIS" \
-	org.opencontainers.image.description="PostgreSQL ${POSTGRES_VERSION} and PostGIS ${POSTGIS_VERSION} on multi arch" \
+	org.opencontainers.image.description="PostgreSQL and PostGIS on multi arch" \
 	org.opencontainers.image.licenses="MIT" \
 	org.opencontainers.image.url="https://hub.docker.com/r/jdrouet/postgis" \
 	org.opencontainers.image.source="https://github.com/jdrouet/dockerfiles"
