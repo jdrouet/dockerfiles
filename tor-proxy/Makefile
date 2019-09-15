@@ -7,6 +7,11 @@ buildx:
 		--platform linux/arm/v7,linux/arm64/v8,linux/386,linux/amd64 \
 		-t ${IMAGE_NAME}:${VERSION} .
 
+buildx-push:
+	docker buildx build --push \
+		--platform linux/arm/v7,linux/arm64/v8,linux/386,linux/amd64 \
+		-t ${IMAGE_NAME}:${VERSION} .
+
 build: build-arm32v7 build-arm64v8 build-i386 build-amd64
 
 build-arm32v7:
