@@ -6,6 +6,8 @@ on:
       - master
     paths:
       - 'postgis/*'
+  schedule:
+    - cron:  '0 4 * * 2'
 
 jobs:
   build-image:

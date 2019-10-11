@@ -6,6 +6,8 @@ on:
       - master
     paths:
       - 'privoxy/*'
+  schedule:
+    - cron:  '0 4 * * 2'
 
 jobs:
   build-image:
