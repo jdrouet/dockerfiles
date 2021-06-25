@@ -1,4 +1,4 @@
-FROM rust:latest
+FROM rust:alpine
 
 RUN rustup component add rustfmt
 
