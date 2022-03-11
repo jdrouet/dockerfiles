@@ -3,7 +3,7 @@ stages:
 
 build-images:
   stage: build
-  image: jdrouet/docker-with-buildx
+  image: jdrouet/docker-with-buildx:latest
   services:
     - docker:dind
   parallel:
