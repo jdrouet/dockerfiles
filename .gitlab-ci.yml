@@ -17,6 +17,7 @@ build-images:
   before_script:
     - apk add --no-cache bash curl jq
     - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+    - docker buildx create --use --platform linux/amd64,linux/arm64
   script:
     - cd $PROJECT_FOLDER && EXTRA_ARGS="--push" bash ./build.sh
 
