@@ -1,0 +1,21 @@
+stages:
+  - build
+
+build-images:
+  stage: build
+  image: jdrouet/docker-with-buildx
+  services:
+    - docker:dind
+  parallel:
+    matrix:
+      - PROJECT_FOLDER:
+        - docker-with-buildx
+        - docker-with-compose
+        - node-mjml
+        - rust-clippy
+        - rust-rustfmt
+  script:
+    - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+    - cd $PROJECT_FOLDER
+    - EXTRA_ARGS="--push" ./build.sh
+

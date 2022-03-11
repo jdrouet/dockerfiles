@@ -1,5 +1,6 @@
 FROM node:current-alpine
 
-RUN npm install -g mjml
+ARG MJML_VERSION
+RUN npm install -g mjml@${MJML_VERSION}
 
 ENTRYPOINT ["mjml"]
