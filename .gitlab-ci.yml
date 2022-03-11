@@ -16,6 +16,5 @@ build-images:
         - rust-rustfmt
   script:
     - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
-    - cd $PROJECT_FOLDER
-    - EXTRA_ARGS="--push" ./build.sh
+    - cd $PROJECT_FOLDER && EXTRA_ARGS="--push" ./build.sh
 
