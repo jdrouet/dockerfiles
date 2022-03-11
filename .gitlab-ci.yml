@@ -15,7 +15,7 @@ build-images:
         - rust-clippy
         - rust-rustfmt
   before_script:
-    - apk add --no-cache bash curl
+    - apk add --no-cache bash curl jq
     - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
   script:
     - cd $PROJECT_FOLDER && EXTRA_ARGS="--push" bash ./build.sh
