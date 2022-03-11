@@ -15,6 +15,7 @@ build-images:
         - rust-clippy
         - rust-rustfmt
   script:
+    - echo $DOCKER_USERNAME
     - echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin
     - cd $PROJECT_FOLDER
     - EXTRA_ARGS="--push" ./build.sh
