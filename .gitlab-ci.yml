@@ -9,6 +9,7 @@ build-images:
   parallel:
     matrix:
       - PROJECT_FOLDER:
+        - cargo-outdated
         - docker-with-buildx
         - docker-with-compose
         - node-mjml
